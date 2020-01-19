@@ -9,7 +9,6 @@ async fn main() {
 
 pub mod filters {
     use super::handlers;
-    //use super::models::Todo;
     use warp::Filter;
 
     pub fn all() -> impl Filter<Extract = impl warp::Reply, Error = warp::Rejection> + Clone {
