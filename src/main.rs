@@ -47,11 +47,13 @@ pub mod handlers {
 
     pub async fn info2() -> Result<impl warp::Reply, Infallible> {
         task::spawn_blocking(|| {
+            // simulate cpu intensive task
             thread::sleep(Duration::from_secs(6));
             println!("spawn_blocking");
         });
 
         task::spawn(async {
+            // non blocking task
             tokio::time::delay_for(Duration::from_secs(5)).await;
             println!("spawn_non_blocking")
         });
