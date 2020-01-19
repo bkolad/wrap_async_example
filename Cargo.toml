@@ -1,0 +1,15 @@
+[package]
+name = "wrap_async_example"
+version = "0.1.0"
+authors = ["bkolad <blazejkolad@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "0.2", features = ["full"] }
+warp = "0.2"
+serde = "1.0"
+serde_json = "1.0"
+serde_urlencoded = "0.6"
+serde_derive = "1.0"
